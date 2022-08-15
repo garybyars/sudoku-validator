@@ -73,22 +73,20 @@ let puzzle = [
   console.log(getSection(puzzle,1,0)); 
   
   //Step 4: include1to9 DOES NOT WORK //
-  
-  const includes1to9 = (puzzle,rowIndex) => {
-    
-      const row = [];
+
+const includes1to9 = (grid) => {
     for (let i = 0; i < puzzle.length; i++) {
-      if (i === rowIndex) row.push(puzzle[i]);
+      if (i === grid) grid.push(puzzle[i]);
     
-        if (row.includes(1) 
-         && row.includes(2)
-         && row.includes(3)
-         && row.includes(4)
-         && row.includes(5)
-         && row.includes(6)
-         && row.includes(7)
-         && row.includes(8)
-         && row.includes(9)) {
+        if (grid.includes(1) 
+         && grid.includes(2)
+         && grid.includes(3)
+         && grid.includes(4)
+         && grid.includes(5)
+         && grid.includes(6)
+         && grid.includes(7)
+         && grid.includes(8)
+         && grid.includes(9)) {
           return true
           } else {
           return false
